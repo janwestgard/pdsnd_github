@@ -172,7 +172,17 @@ def user_stats(df):
     print('-'*40)
     return(df)
 
-
+#Ask if the user want to see the raw data (first five rows)
+def user_data(df):
+    """Displays raw data if the user want to see this"""
+    raw_data = input('\nType yes if you would like to see the raw data from the file?\n').lower()
+    n = 0
+    
+    while raw_data == 'yes':
+        print(df.iloc[n:(n+5)])
+        n += 7
+        raw_data = input('\nDo you like to see five more rows, type yes?\n').lower()
+    return()
         
 # Main function calls for user input and runs the program until user ask's to quit
 def main():
@@ -184,7 +194,8 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        
+        user_data(df)
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
