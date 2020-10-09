@@ -180,7 +180,7 @@ def user_data(df):
     
     while raw_data == 'yes':
         print(df.iloc[n:(n+5)])
-        n += 7
+        n += 5
         raw_data = input('\nDo you like to see five more rows, type yes?\n').lower()
     return()
         
