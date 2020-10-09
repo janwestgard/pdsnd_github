@@ -1,7 +1,7 @@
 import time
 import pandas as pd
 
-#Defining the cities and city-files available
+#Listing the cities and city files available
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
